@@ -1,14 +1,29 @@
 English | [中文](../../zh/docs/README.md)
 
-# English Docs Index
+# English Docs
 
-This set of essays revolves around one central claim:
+These essays explain why many failures are not failures of answer generation, but failures to construct the problem as a solvable structure in the first place.
 
-> Answers are given inside an already specified problem space, while questioning constructs the solvable structure of the problem itself.
+## How To Read
 
-If you are entering this repository for the first time, start from `00-overview` and then continue in numerical order.
+Choose one of these reading paths:
 
-## Main Essays
+- `5-minute orientation`: [01-what-are-we-doing-when-we-ask](01-what-are-we-doing-when-we-ask.md) + [09-more-ask-less-answer-how-should-we-use-llms](09-more-ask-less-answer-how-should-we-use-llms.md)
+- `Method intro`: [01-what-are-we-doing-when-we-ask](01-what-are-we-doing-when-we-ask.md), [03-what-makes-a-good-question](03-what-makes-a-good-question.md), [04-questioning-as-an-algorithm](04-questioning-as-an-algorithm.md), [09-more-ask-less-answer-how-should-we-use-llms](09-more-ask-less-answer-how-should-we-use-llms.md)
+- `Full read`: start from [00-overview](00-overview.md) and continue through the series in numerical order
+
+## Core Essays
+
+Start with these four:
+
+- [01-what-are-we-doing-when-we-ask](01-what-are-we-doing-when-we-ask.md)
+- [03-what-makes-a-good-question](03-what-makes-a-good-question.md)
+- [04-questioning-as-an-algorithm](04-questioning-as-an-algorithm.md)
+- [09-more-ask-less-answer-how-should-we-use-llms](09-more-ask-less-answer-how-should-we-use-llms.md)
+
+## Full Index
+
+### Main Essays
 
 1. [00-overview](00-overview.md)  
    Series overview, structure, and suggested reading order.
@@ -31,14 +46,11 @@ If you are entering this repository for the first time, start from `00-overview`
 10. [09-more-ask-less-answer-how-should-we-use-llms](09-more-ask-less-answer-how-should-we-use-llms.md)  
     Places the whole argument back into the use of LLMs.
 
-## Appendices
+### Appendices
 
 1. [appendix-11-dimensions-and-pseudo-problems](appendix-11-dimensions-and-pseudo-problems.md)  
    Uses theoretical physics to show the difference between a grand interrogative and a researchable problem.
 2. [appendix-problem-formulation-in-the-age-of-ai](appendix-problem-formulation-in-the-age-of-ai.md)  
    Explains why problem formulation becomes scarcer when answers become cheap.
-
-## Related Entry Points
-
-- [English Skill](../skill/SKILL.md)
-- [Repository Home](../../README.en.md)
+3. [appendix-four-knowledge-states-and-the-problem-paradigm](appendix-four-knowledge-states-and-the-problem-paradigm.md)  
+   Explains why starting from the problem covers a wider range of knowledge states than starting from the answer.
