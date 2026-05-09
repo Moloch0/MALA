@@ -1,0 +1,19 @@
+{
+  "case_id": "case-11",
+  "baseline_failure_type": "not_applicable",
+  "baseline_ambiguity_handling_score": 2,
+  "baseline_answer_adequacy_score": 2,
+  "baseline_total": 4,
+  "treatment_diagnosis_score": 2,
+  "treatment_repair_score": 2,
+  "treatment_answer_discipline_score": 2,
+  "treatment_intervention_fit_score": 2,
+  "treatment_total": 8,
+  "review_note": "The baseline already does unusually strong ambiguity management by distinguishing EPUB/KPF, reflowable/fixed layout, metadata, image placement, cover handling, and validation. The treatment correctly diagnoses the hidden representation choices and turns the prompt into a bounded, testable EPUB workflow, with MALA-level structure justified by the deep workflow-design ambiguity.",
+  "reasoning_bucket_fit": "deep",
+  "_meta": {
+    "judged_at": "2026-05-09T09:53:43Z",
+    "judge_model": "gpt-5.5",
+    "transport": "codex_exec"
+  }
+}

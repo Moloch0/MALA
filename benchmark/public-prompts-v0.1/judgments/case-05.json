@@ -1,0 +1,19 @@
+{
+  "case_id": "case-05",
+  "baseline_failure_type": "missing_context",
+  "baseline_ambiguity_handling_score": 2,
+  "baseline_answer_adequacy_score": 2,
+  "baseline_total": 4,
+  "treatment_diagnosis_score": 2,
+  "treatment_repair_score": 2,
+  "treatment_answer_discipline_score": 2,
+  "treatment_intervention_fit_score": 1,
+  "treatment_total": 7,
+  "review_note": "The baseline directly identifies the absent execution context and gives bounded implementation sketches without pretending it can edit missing code. The treatment diagnoses and repairs the underspecification well, but its full MALA structure is somewhat heavy for a medium coding prompt where the main issue is simply missing handler context.",
+  "reasoning_bucket_fit": "medium",
+  "_meta": {
+    "judged_at": "2026-05-09T09:53:18Z",
+    "judge_model": "gpt-5.5",
+    "transport": "codex_exec"
+  }
+}

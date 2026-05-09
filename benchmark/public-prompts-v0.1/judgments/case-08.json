@@ -1,0 +1,19 @@
+{
+  "case_id": "case-08",
+  "baseline_failure_type": "mixed_goals",
+  "baseline_ambiguity_handling_score": 1,
+  "baseline_answer_adequacy_score": 2,
+  "baseline_total": 3,
+  "treatment_diagnosis_score": 2,
+  "treatment_repair_score": 2,
+  "treatment_answer_discipline_score": 2,
+  "treatment_intervention_fit_score": 2,
+  "treatment_total": 8,
+  "review_note": "The baseline is highly useful but mostly proceeds into a concrete implementation plan after only partially bounding the mixed objectives and guarantee problem. The treatment directly diagnoses the structural ambiguity, repairs the question into controllable criteria, and keeps the answer aligned with those limits.",
+  "reasoning_bucket_fit": "deep",
+  "_meta": {
+    "judged_at": "2026-05-09T09:53:23Z",
+    "judge_model": "gpt-5.5",
+    "transport": "codex_exec"
+  }
+}

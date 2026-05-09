@@ -1,0 +1,19 @@
+{
+  "case_id": "case-03",
+  "baseline_failure_type": "missing_criterion",
+  "baseline_ambiguity_handling_score": 1,
+  "baseline_answer_adequacy_score": 2,
+  "baseline_total": 3,
+  "treatment_diagnosis_score": 2,
+  "treatment_repair_score": 2,
+  "treatment_answer_discipline_score": 2,
+  "treatment_intervention_fit_score": 1,
+  "treatment_total": 7,
+  "review_note": "The baseline gives highly useful photography advice, but mostly answers the broad prompt directly without explicitly bounding what counts as better photos. The treatment correctly diagnoses vague criteria and scope and produces a stronger bounded practice plan, though the full diagnostic apparatus is somewhat heavy for a medium-depth skill-improvement prompt.",
+  "reasoning_bucket_fit": "medium",
+  "_meta": {
+    "judged_at": "2026-05-09T09:52:59Z",
+    "judge_model": "gpt-5.5",
+    "transport": "codex_exec"
+  }
+}

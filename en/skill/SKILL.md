@@ -116,10 +116,13 @@ Problems in the original input
 Repaired question
 > ...
 
+Final answer
+- ...
+
 Repair notes
 - What was added
 - What was separated
 - What was corrected
 ```
 
-If the original input has not yet formed a question, first state clearly that it is still only a topic, wish, attitude, or under-formed goal rather than a question that can be answered directly.
+If the original input has not yet formed a question, first state clearly that it is still only a topic, wish, attitude, or under-formed goal rather than a question that can be answered directly. The final answer should respond to the repaired question, not to the raw input.

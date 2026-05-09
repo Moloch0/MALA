@@ -1,0 +1,13 @@
+case_id,depth_bucket,headline_bucket,baseline_status,treatment_status,baseline_failure_type,baseline_ambiguity_handling_score,baseline_answer_adequacy_score,baseline_total,treatment_diagnosis_score,treatment_repair_score,treatment_answer_discipline_score,treatment_intervention_fit_score,treatment_total,notes
+case-01,medium,no,collected,collected,missing_context,1,2,3,2,2,2,1,7,"Research-flavored prompt that is already fairly formed but still bundles audience, scope, and evidence expectations."
+case-02,deep,yes,collected,collected,mixed_goals,2,2,4,2,2,2,2,8,"Broad goal with mixed subquestions about gear, targets, budget, and success criteria."
+case-03,medium,no,collected,collected,missing_criterion,1,2,3,2,2,2,1,7,Useful but still broad skill-development prompt with unclear criterion for what counts as better photos.
+case-04,negative_control,no,collected,collected,missing_context,1,2,3,2,2,2,0,6,"Boundary case: shallow and blocked mainly by missing immediate context, not by deep problem construction."
+case-05,medium,no,collected,collected,missing_context,2,2,4,2,2,2,1,7,"Depends on absent surrounding code and stack, but not primarily a deep planning prompt."
+case-06,medium,no,collected,collected,missing_context,1,2,3,2,2,2,1,7,"General learning request where target page, skill level, and success metric are absent."
+case-07,deep,yes,collected,collected,missing_criterion,1,2,3,2,2,2,2,8,"Deep boundary problem mixing legal, technical, search, and access-control layers with unrealistic certainty language."
+case-08,deep,yes,collected,collected,mixed_goals,1,2,3,2,2,2,2,8,"High-value deep prompt with mixed goals across search indexing, AI training eligibility, and verifiability."
+case-09,medium,no,collected,collected,not_applicable,2,2,4,2,2,2,1,7,Three bundled questions with different decision criteria but still answerable directly.
+case-10,deep,yes,collected,collected,not_applicable,2,2,4,2,2,2,1,7,"Consumer-decision prompt mixing risk tolerance, budget, sampling strategy, and choice criteria."
+case-11,deep,yes,collected,collected,not_applicable,2,2,4,2,2,2,2,8,"Tool-building prompt that hides format choice, placement rules, metadata, and output criteria."
+case-12,negative_control,no,collected,collected,shallow_but_ok,0,2,2,2,1,2,0,5,Clear shallow task that should usually be answered directly and serves as a control against overusing MALA.

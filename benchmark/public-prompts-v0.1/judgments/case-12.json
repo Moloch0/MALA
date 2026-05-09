@@ -1,0 +1,19 @@
+{
+  "case_id": "case-12",
+  "baseline_failure_type": "shallow_but_ok",
+  "baseline_ambiguity_handling_score": 0,
+  "baseline_answer_adequacy_score": 2,
+  "baseline_total": 2,
+  "treatment_diagnosis_score": 2,
+  "treatment_repair_score": 1,
+  "treatment_answer_discipline_score": 2,
+  "treatment_intervention_fit_score": 0,
+  "treatment_total": 5,
+  "review_note": "The baseline gives the straightforward useful JavaScript answer but does not explicitly surface timezone or locale assumptions. The treatment correctly notices minor ambiguities, but this negative-control prompt did not warrant a full MALA-style repair.",
+  "reasoning_bucket_fit": "negative_control",
+  "_meta": {
+    "judged_at": "2026-05-09T09:53:45Z",
+    "judge_model": "gpt-5.5",
+    "transport": "codex_exec"
+  }
+}

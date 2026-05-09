@@ -1,0 +1,19 @@
+{
+  "case_id": "case-07",
+  "baseline_failure_type": "missing_criterion",
+  "baseline_ambiguity_handling_score": 1,
+  "baseline_answer_adequacy_score": 2,
+  "baseline_total": 3,
+  "treatment_diagnosis_score": 2,
+  "treatment_repair_score": 2,
+  "treatment_answer_discipline_score": 2,
+  "treatment_intervention_fit_score": 2,
+  "treatment_total": 8,
+  "review_note": "The baseline gives a strong practical layered answer and correctly rejects the guarantee, but it does not explicitly surface the missing target, criterion, and constraints enough for a 2 in ambiguity handling. The treatment diagnoses the mixed legal, technical, search, and access-control layers directly and repairs the prompt in a way that materially improves answer discipline.",
+  "reasoning_bucket_fit": "deep",
+  "_meta": {
+    "judged_at": "2026-05-09T09:53:26Z",
+    "judge_model": "gpt-5.5",
+    "transport": "codex_exec"
+  }
+}

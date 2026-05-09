@@ -1,0 +1,19 @@
+{
+  "case_id": "case-10",
+  "baseline_failure_type": "not_applicable",
+  "baseline_ambiguity_handling_score": 2,
+  "baseline_answer_adequacy_score": 2,
+  "baseline_total": 4,
+  "treatment_diagnosis_score": 2,
+  "treatment_repair_score": 2,
+  "treatment_answer_discipline_score": 2,
+  "treatment_intervention_fit_score": 1,
+  "treatment_total": 7,
+  "review_note": "The baseline already handles the main ambiguity, compatibility constraints, and low-risk buying strategy unusually well for a raw response. The treatment diagnoses and repairs the structure clearly, but its MALA framing is heavier than necessary because the direct answer was already strong.",
+  "reasoning_bucket_fit": "deep",
+  "_meta": {
+    "judged_at": "2026-05-09T09:53:42Z",
+    "judge_model": "gpt-5.5",
+    "transport": "codex_exec"
+  }
+}

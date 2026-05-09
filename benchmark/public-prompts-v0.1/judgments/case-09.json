@@ -1,0 +1,19 @@
+{
+  "case_id": "case-09",
+  "baseline_failure_type": "not_applicable",
+  "baseline_ambiguity_handling_score": 2,
+  "baseline_answer_adequacy_score": 2,
+  "baseline_total": 4,
+  "treatment_diagnosis_score": 2,
+  "treatment_repair_score": 2,
+  "treatment_answer_discipline_score": 2,
+  "treatment_intervention_fit_score": 1,
+  "treatment_total": 7,
+  "review_note": "The baseline already bounds the main ambiguity, separates use cases, and gives a strong direct answer. The treatment correctly diagnoses the mixed subquestions and improves framing, but the full MALA scaffolding is somewhat heavier than necessary for a medium, directly answerable comparison prompt.",
+  "reasoning_bucket_fit": "medium",
+  "_meta": {
+    "judged_at": "2026-05-09T09:53:38Z",
+    "judge_model": "gpt-5.5",
+    "transport": "codex_exec"
+  }
+}

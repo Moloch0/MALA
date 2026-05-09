@@ -1,0 +1,19 @@
+{
+  "case_id": "case-06",
+  "baseline_failure_type": "missing_context",
+  "baseline_ambiguity_handling_score": 1,
+  "baseline_answer_adequacy_score": 2,
+  "baseline_total": 3,
+  "treatment_diagnosis_score": 2,
+  "treatment_repair_score": 2,
+  "treatment_answer_discipline_score": 2,
+  "treatment_intervention_fit_score": 1,
+  "treatment_total": 7,
+  "review_note": "The baseline gives a strong practical SEO learning plan but mostly answers the vague prompt directly rather than explicitly surfacing the missing page type, skill level, and success metric. The treatment correctly diagnoses and repairs the missing scope and criteria, though the amount of MALA scaffolding is somewhat heavy for a medium general learning request.",
+  "reasoning_bucket_fit": "medium",
+  "_meta": {
+    "judged_at": "2026-05-09T09:53:20Z",
+    "judge_model": "gpt-5.5",
+    "transport": "codex_exec"
+  }
+}

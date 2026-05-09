@@ -1,0 +1,26 @@
+{
+  "benchmark_id": "public-prompts-v0.1",
+  "version": "v0.1",
+  "created_at": "2026-05-09",
+  "case_count": 12,
+  "protocol_version": "1.1-depth-stratified",
+  "scoring_version": "1.0-structure",
+  "prompt_source_policy": "real public user prompts only",
+  "headline_bucket": "deep",
+  "secondary_bucket": "medium",
+  "control_bucket": "negative_control",
+  "included_files": [
+    "README.md",
+    "README.zh.md",
+    "protocol.md",
+    "rubric.md",
+    "tasks.jsonl",
+    "results.csv"
+  ],
+  "limitations": [
+    "small sample size",
+    "human judgment remains part of scoring",
+    "no claim of statistical significance",
+    "measures formulation gain rather than universal answer correctness"
+  ]
+}
