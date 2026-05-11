@@ -4,6 +4,8 @@ This is MALA's first frozen release benchmark built from real public user prompt
 
 It is not a paper benchmark. It is a release-evaluation set designed to show when MALA-style problem formulation reduces premature answering and turns a vague request into a more answerable one.
 
+After the repository was reorganized around MALA-Graph, this benchmark remains a MALA-core benchmark. It evaluates the problem-formulation skill under `core/`, not the future graph runtime.
+
 ## Why this benchmark is depth-stratified
 
 MALA is not meant for every prompt.
@@ -52,7 +54,7 @@ See:
 Fast path inside Codex: run the whole release-eval workflow through the local `codex exec` client.
 
 ```bash
-python benchmark/public-prompts-v0.1/scripts/run_pipeline.py --transport codex_exec --bucket deep --concurrency 3 --model gpt-5.5 --judge-model gpt-5.5
+python core/benchmark/public-prompts-v0.1/scripts/run_pipeline.py --transport codex_exec --bucket deep --concurrency 3 --model gpt-5.5 --judge-model gpt-5.5
 ```
 
 This will:
@@ -60,7 +62,7 @@ This will:
 1. collect baseline and treatment runs
 2. judge them
 3. refresh `results.csv` and `summary.md`
-4. generate case-study markdown under `en/cases/` and `zh/cases/`
+4. generate case-study markdown under `core/en/cases/` and `core/zh/cases/`
 
 This path reuses the model/provider/auth that your local Codex client already knows how to use.
 
@@ -69,25 +71,25 @@ You can still run each step manually:
 1. Run generations
 
 ```bash
-python benchmark/public-prompts-v0.1/scripts/run_batch.py --transport codex_exec --mode all --bucket deep --concurrency 3 --model gpt-5.5
+python core/benchmark/public-prompts-v0.1/scripts/run_batch.py --transport codex_exec --mode all --bucket deep --concurrency 3 --model gpt-5.5
 ```
 
 2. Run judgments
 
 ```bash
-python benchmark/public-prompts-v0.1/scripts/judge_runs.py --transport codex_exec --bucket deep --concurrency 3 --model gpt-5.5
+python core/benchmark/public-prompts-v0.1/scripts/judge_runs.py --transport codex_exec --bucket deep --concurrency 3 --model gpt-5.5
 ```
 
 3. Refresh merged outputs
 
 ```bash
-python benchmark/public-prompts-v0.1/scripts/refresh_results.py
+python core/benchmark/public-prompts-v0.1/scripts/refresh_results.py
 ```
 
 4. Generate case-study pages from official artifacts
 
 ```bash
-python benchmark/public-prompts-v0.1/scripts/generate_cases.py --bucket deep --limit 3
+python core/benchmark/public-prompts-v0.1/scripts/generate_cases.py --bucket deep --limit 3
 ```
 
 The batch runner uses the exact approved baseline rule:

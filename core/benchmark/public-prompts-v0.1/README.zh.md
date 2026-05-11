@@ -4,6 +4,8 @@
 
 它不是论文级 benchmark，而是一个发布评估包，用来展示：在什么情况下，MALA 式的问题构造会减少过早作答，并把模糊输入修成更可回答的问题。
 
+仓库重组为 MALA-Graph 之后，这个 benchmark 仍然是 MALA-core 的 benchmark。它评估的是 `core/` 下的问题构造 skill，而不是未来的图运行时。
+
 ## 为什么要按深度分层
 
 MALA 不是给所有 prompt 用的。
@@ -52,7 +54,7 @@ MALA 不是给所有 prompt 用的。
 在 Codex 环境里，最快的方式是通过本地 `codex exec` 一条命令跑完整条 release-eval 流水线：
 
 ```bash
-python benchmark/public-prompts-v0.1/scripts/run_pipeline.py --transport codex_exec --bucket deep --concurrency 3 --model gpt-5.5 --judge-model gpt-5.5
+python core/benchmark/public-prompts-v0.1/scripts/run_pipeline.py --transport codex_exec --bucket deep --concurrency 3 --model gpt-5.5 --judge-model gpt-5.5
 ```
 
 这条命令会：
@@ -60,7 +62,7 @@ python benchmark/public-prompts-v0.1/scripts/run_pipeline.py --transport codex_e
 1. 收集 baseline 和 treatment runs
 2. 批量 judge
 3. 刷新 `results.csv` 和 `summary.md`
-4. 在 `en/cases/` 与 `zh/cases/` 下生成案例页
+4. 在 `core/en/cases/` 与 `core/zh/cases/` 下生成案例页
 
 这条路径会复用你本机 Codex client 已经能跑通的 model/provider/auth。
 
@@ -69,25 +71,25 @@ python benchmark/public-prompts-v0.1/scripts/run_pipeline.py --transport codex_e
 1. 生成 baseline / treatment
 
 ```bash
-python benchmark/public-prompts-v0.1/scripts/run_batch.py --transport codex_exec --mode all --bucket deep --concurrency 3 --model gpt-5.5
+python core/benchmark/public-prompts-v0.1/scripts/run_batch.py --transport codex_exec --mode all --bucket deep --concurrency 3 --model gpt-5.5
 ```
 
 2. 批量判分
 
 ```bash
-python benchmark/public-prompts-v0.1/scripts/judge_runs.py --transport codex_exec --bucket deep --concurrency 3 --model gpt-5.5
+python core/benchmark/public-prompts-v0.1/scripts/judge_runs.py --transport codex_exec --bucket deep --concurrency 3 --model gpt-5.5
 ```
 
 3. 回写结果表与摘要
 
 ```bash
-python benchmark/public-prompts-v0.1/scripts/refresh_results.py
+python core/benchmark/public-prompts-v0.1/scripts/refresh_results.py
 ```
 
 4. 基于官方 artifacts 生成案例页
 
 ```bash
-python benchmark/public-prompts-v0.1/scripts/generate_cases.py --bucket deep --limit 3
+python core/benchmark/public-prompts-v0.1/scripts/generate_cases.py --bucket deep --limit 3
 ```
 
 这套 harness 固定遵守你确认过的公平协议：

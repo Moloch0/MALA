@@ -14,7 +14,7 @@ Send the following prompt exactly:
 
 ```text
 Read and apply this skill exactly as written:
-C:\Users\LihengLuo\Documents\Codex\2026-05-09\git\MALA\en\skill\SKILL.md
+core/en/skill/SKILL.md
 
 Now apply it to this input:
 

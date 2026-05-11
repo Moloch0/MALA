@@ -9,17 +9,25 @@
 可以按下面三条路径进入：
 
 - `5 分钟理解`：[01-当我们提问时，我们在做什么](01-%E5%BD%93%E6%88%91%E4%BB%AC%E6%8F%90%E9%97%AE%E6%97%B6%EF%BC%8C%E6%88%91%E4%BB%AC%E5%9C%A8%E5%81%9A%E4%BB%80%E4%B9%88.md) + [09-more ask, less answer，我们应该如何正确使用LLM](09-more%20ask,%20less%20answer%EF%BC%8C%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8LLM.md)
-- `方法入门`：[01-当我们提问时，我们在做什么](01-%E5%BD%93%E6%88%91%E4%BB%AC%E6%8F%90%E9%97%AE%E6%97%B6%EF%BC%8C%E6%88%91%E4%BB%AC%E5%9C%A8%E5%81%9A%E4%BB%80%E4%B9%88.md)、[03-什么叫一个好问题](03-%E4%BB%80%E4%B9%88%E5%8F%AB%E4%B8%80%E4%B8%AA%E5%A5%BD%E9%97%AE%E9%A2%98.md)、[04-提问作为算法](04-%E6%8F%90%E9%97%AE%E4%BD%9C%E4%B8%BA%E7%AE%97%E6%B3%95.md)、[09-more ask, less answer，我们应该如何正确使用LLM](09-more%20ask,%20less%20answer%EF%BC%8C%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8LLM.md)
+- `方法入门`：[01-当我们提问时，我们在做什么](01-%E5%BD%93%E6%88%91%E4%BB%AC%E6%8F%90%E9%97%AE%E6%97%B6%EF%BC%8C%E6%88%91%E4%BB%AC%E5%9C%A8%E5%81%9A%E4%BB%80%E4%B9%88.md)、[03-什么叫一个好问题](03-%E4%BB%80%E4%B9%88%E5%8F%AB%E4%B8%80%E4%B8%AA%E5%A5%BD%E9%97%AE%E9%A2%98.md)、[04-提问作为算法](04-%E6%8F%90%E9%97%AE%E4%BD%9C%E4%B8%BA%E7%AE%97%E6%B3%95.md)、[09-more ask, less answer，我们应该如何正确使用LLM](09-more%20ask,%20less%20answer%EF%BC%8C%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8LLM.md)、[10-target 2 skill](10-target%202%20skill.md)
 - `完整阅读`：从 [00-目录](00-%E7%9B%AE%E5%BD%95.md) 开始，再按编号顺序读完整个系列
 
 ## 核心文稿
 
-先读这四篇：
+先读这八篇：
 
 - [01-当我们提问时，我们在做什么](01-%E5%BD%93%E6%88%91%E4%BB%AC%E6%8F%90%E9%97%AE%E6%97%B6%EF%BC%8C%E6%88%91%E4%BB%AC%E5%9C%A8%E5%81%9A%E4%BB%80%E4%B9%88.md)
 - [03-什么叫一个好问题](03-%E4%BB%80%E4%B9%88%E5%8F%AB%E4%B8%80%E4%B8%AA%E5%A5%BD%E9%97%AE%E9%A2%98.md)
 - [04-提问作为算法](04-%E6%8F%90%E9%97%AE%E4%BD%9C%E4%B8%BA%E7%AE%97%E6%B3%95.md)
 - [09-more ask, less answer，我们应该如何正确使用LLM](09-more%20ask,%20less%20answer%EF%BC%8C%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8LLM.md)
+- [10-当前skill的推论](10-%E5%BD%93%E5%89%8Dskill%E7%9A%84%E6%8E%A8%E8%AE%BA.md)
+- [11-当前skill的审查结论](11-%E5%BD%93%E5%89%8Dskill%E7%9A%84%E5%AE%A1%E6%9F%A5%E7%BB%93%E8%AE%BA.md)
+- [12-四组分类的充分必要性审查](12-%E5%9B%9B%E7%BB%84%E5%88%86%E7%B1%BB%E7%9A%84%E5%85%85%E5%88%86%E5%BF%85%E8%A6%81%E6%80%A7%E5%AE%A1%E6%9F%A5.md)
+- [13-重构后的最终版skill应该是什么样的，为什么](13-%E9%87%8D%E6%9E%84%E5%90%8E%E7%9A%84%E6%9C%80%E7%BB%88%E7%89%88skill%E5%BA%94%E8%AF%A5%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88.md)
+
+如果只想看最终收束版，直接读：
+
+- [10-target 2 skill](10-target%202%20skill.md)
 
 ## 完整目录
 
@@ -45,6 +53,19 @@
    讨论问题构造本身的正确性条件。
 10. [09-more ask, less answer，我们应该如何正确使用LLM](09-more%20ask,%20less%20answer%EF%BC%8C%E6%88%91%E4%BB%AC%E5%BA%94%E8%AF%A5%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8LLM.md)  
     把整条论证放回到 LLM 的使用方式中。
+11. [10-当前skill的推论](10-%E5%BD%93%E5%89%8Dskill%E7%9A%84%E6%8E%A8%E8%AE%BA.md)  
+    说明当前 `SKILL.md` 如何作为前面理论在当前接口约束下的一个 corollary。
+12. [11-当前skill的审查结论](11-%E5%BD%93%E5%89%8Dskill%E7%9A%84%E5%AE%A1%E6%9F%A5%E7%BB%93%E8%AE%BA.md)  
+    判断当前 `SKILL.md` 是否已经通过接口审查，以及它是否已经接近可严格闭合的形式。
+13. [12-四组分类的充分必要性审查](12-%E5%9B%9B%E7%BB%84%E5%88%86%E7%B1%BB%E7%9A%84%E5%85%85%E5%88%86%E5%BF%85%E8%A6%81%E6%80%A7%E5%AE%A1%E6%9F%A5.md)  
+    分别审查八槽位、三类失效、三类修复、四项验证是否构成充分必要分类。
+14. [13-重构后的最终版skill应该是什么样的，为什么](13-%E9%87%8D%E6%9E%84%E5%90%8E%E7%9A%84%E6%9C%80%E7%BB%88%E7%89%88skill%E5%BA%94%E8%AF%A5%E6%98%AF%E4%BB%80%E4%B9%88%E6%A0%B7%E7%9A%84%EF%BC%8C%E4%B8%BA%E4%BB%80%E4%B9%88.md)  
+    基于前十二篇，给出重构后的目标 skill 形态：状态对象、分层动作、停止规则与交接契约。
+
+### 最终收束版
+
+- [10-target 2 skill](10-target%202%20skill.md)  
+  对 10-13 的最终压缩版：说明这个 skill 为什么这样写，以及它的各个部分现在是否已经完备。
 
 ### 附录
 

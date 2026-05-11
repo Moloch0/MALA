@@ -2,50 +2,67 @@ English | [中文](README.md)
 
 # MALA
 
-MALA, short for More Ask, Less Answer, is a skill for repairing vague requests into answerable questions, and also a set of essays about problem formulation.
-Its core principle is:
-> Answers are given inside an already specified problem space, while questioning constructs the solvable structure of the problem itself.
+MALA now refers to the larger **MALA-Graph** project: a structured problem-solving framework for complex tasks.
 
-## Quickstart
+Its goal is not to make an LLM produce a longer one-shot answer. Its goal is to represent a complex task as a recursive, inspectable, updateable, and stoppable **Problem State Graph**. On this graph, the LLM does not merely answer. It reads the current problem state, chooses an appropriate solver action, and continues clarifying, decomposing, retrieving, verifying, compressing, or stopping.
 
-Load the [English skill](en/skill/SKILL.md), then directly send your raw question.
+## Core Distinction
 
-## If You Want To Understand MALA
+- `MALA-core`: the original More Ask, Less Answer layer. It repairs vague input into a judgeable, actionable, and updatable question.
+- `MALA-Graph`: the new top-level framework. It organizes problem states into a graph and uses a solver policy to decide which node and action are most worth advancing next.
 
-See the [English docs](en/docs/README.md).
+The original MALA material now lives under [core/](core/README.en.md), where it serves as the problem-formulation core of MALA-Graph.
 
-## Should I Use MALA?
+## Current Layout
 
-Use MALA when:
+```text
+MALA/
+  README.md
+  README.en.md
+  doc/
+    README.md
+    overview.md
+    related-work.md
+  core/
+    README.md
+    README.en.md
+    zh/
+    en/
+    benchmark/
+    releases/
+```
 
-- the input is still a topic, wish, or direction rather than a formed question;
-- several questions are mixed together and the real unknown is unclear;
-- the criterion, constraint, or boundary is missing, so direct answering will drift;
-- the next useful step depends on repairing the problem first.
+## Start Here
 
-Do not use MALA when:
+- [MALA-Graph top-level positioning](doc/overview.md)
+- [MALA-Graph theoretical foundation](doc/theoretical-foundation.md)
+- [MALA-Graph core architecture](doc/architecture.md)
+- [Related work and the gap for MALA-Graph](doc/related-work.md)
+- [MALA-core Chinese entry](core/README.md)
+- [MALA-core English entry](core/README.en.md)
+- [Chinese skill](core/zh/skill/SKILL.md)
+- [English skill](core/en/skill/SKILL.md)
+- [MALA-core benchmark](core/benchmark/public-prompts-v0.1/README.md)
 
-- the request is already a clear fact lookup or definition lookup;
-- the request is already an explicit comparison;
-- the request is already a decision task with enough constraints;
-- direct answering is better than adding a formulation pass.
+## Working Hypothesis
 
-## One Before / After Example
+MALA-Graph can be summarized as:
 
-Raw input:
+```text
+MALA-Graph = ProblemStateGraph + SolverPolicy
+```
 
-> How long do contestants get to answer on Jeopardy?
+- `ProblemStateGraph` records the problem, unknowns, criteria, constraints, evidence, dependencies, candidate answers, and residual uncertainty.
+- `SolverPolicy` uses the current state, budget, and objective to choose whether to clarify, decompose, retrieve, verify, answer, merge, prune, or stop.
 
-Without MALA, a model often commits to one interpretation, such as "five seconds," and ignores that the show has different timing rules for regular clues, Final Jeopardy, and the online test.
+The goal of a branch is not to eliminate every unknown. The goal is to become saturated: the remaining uncertainty has been explicitly classified as theoretical hardness, resource limit, information blockage, value conflict, acceptable risk, or sufficient for the parent decision.
 
-With MALA:
+## Careful Claim
 
-- `Diagnosis`: the object is clear, but the unknown is mixed across multiple Jeopardy formats.
-- `Repaired question`: "How long do contestants get to answer regular clues, Final Jeopardy, and the Jeopardy online test?"
-- `Final answer`: regular clues are about 5 seconds, Final Jeopardy is 30 seconds, and the online test allows about 15 seconds per item.
+MALA-Graph does not claim to solve all problems, and it does not claim an absolute optimum across all tasks.
 
-More verified examples live in [English cases](en/cases/README.md), but they are still incomplete. I have not yet found a benchmark that is good enough.
+The more defensible claim is: given a problem-state representation, a solver set, a budget, and a value function, MALA-Graph attempts to use metareasoning and value-of-information principles to select the highest expected-value problem-advancement action per unit cost.
 
 ## License
 
-This repository is licensed under [CC BY 4.0](LICENSE). If you share, adapt, or redistribute the material, keep attribution and include a link to the license.
+This repository is licensed under [CC BY 4.0](LICENSE).

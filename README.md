@@ -2,50 +2,67 @@
 
 # MALA
 
-MALA，即 More Ask, Less Answer。是一个把模糊请求修成可回答问题的 skill，也是一组解释问题构造的文稿。
-它依据的核心原则是:
-> 回答是在既定问题空间中给出结果，而提问是在构造问题本身的可求解结构。
+MALA 现在指向更大的 **MALA-Graph**：一个面向复杂问题的结构化求解框架。
 
-## Quickstart
+它的目标不是让 LLM 一次性给出更长的答案，而是把复杂任务显式表示为一个可递归展开、可验证、可回传、可停止的 **Problem State Graph**。在这个图上，LLM 不只是回答问题，而是根据当前问题状态选择合适的 solver，继续澄清、拆分、检索、验证、压缩或停止。
 
-让模型加载 [中文 Skill](zh/skill/SKILL.md)这个文件，然后直接输入你的原始问题。
+## 核心区分
 
-## 如果你想理解 MALA
+- `MALA-core`：原始 More Ask, Less Answer。负责把模糊输入修复成可判断、可推进、可更新的问题。
+- `MALA-Graph`：新的顶层框架。负责把问题状态组织成图，并用 solver policy 决定下一步最值得推进的节点和动作。
 
-见 [中文文稿](zh/docs/README.md) 。
+现有 MALA 已下移到 [core/](core/README.md)，作为 MALA-Graph 的问题构造核心。
 
-## 我该不该用 MALA？
+## 当前结构
 
-适合用 MALA 的情况：
+```text
+MALA/
+  README.md
+  README.en.md
+  doc/
+    README.md
+    overview.md
+    related-work.md
+  core/
+    README.md
+    README.en.md
+    zh/
+    en/
+    benchmark/
+    releases/
+```
 
-- 输入更像话题、愿望或方向，而不是已经成形的问题；
-- 多个问题揉在一起，真正的未知没有被说清；
-- 判准、约束或边界缺失，直接回答会偏题；
-- 你需要先把问题修清楚，下一步行动才有意义。
+## 从哪里读起
 
-不适合用 MALA 的情况：
+- [MALA-Graph 顶层定位](doc/overview.md)
+- [MALA-Graph 理论基础与形式化纲领](doc/theoretical-foundation.md)
+- [MALA-Graph 核心架构](doc/architecture.md)
+- [Related Work：从已有工作到 MALA-Graph 的缺口](doc/related-work.md)
+- [MALA-core 中文入口](core/README.md)
+- [MALA-core English entry](core/README.en.md)
+- [中文 Skill](core/zh/skill/SKILL.md)
+- [English skill](core/en/skill/SKILL.md)
+- [MALA-core benchmark](core/benchmark/public-prompts-v0.1/README.zh.md)
 
-- 已经是明确的事实查询或定义查询；
-- 已经是清楚的比较题；
-- 已经是约束充分的决策题；
-- 直接回答比再做一层问题修复更合适。
+## 工作假设
 
-## 一个前后对比例子
+MALA-Graph 的基本形式可以写成：
 
-原始输入：
+```text
+MALA-Graph = ProblemStateGraph + SolverPolicy
+```
 
-> Jeopardy 参赛者有多长时间作答？
+- `ProblemStateGraph` 记录问题、未知、判准、约束、证据、依赖、候选答案和残余不确定性。
+- `SolverPolicy` 根据当前状态、预算和目标，选择下一步执行澄清、拆分、检索、验证、回答、合并、剪枝或停止。
 
-不用 MALA 时，模型很容易直接押一个解释，比如“5 秒”，然后忽略这个问题其实混了常规题、Final Jeopardy 和线上测试三种作答场景。
+一个分支的目标不是消灭所有未知，而是达到“饱满”：剩余问题已经被明确归类为理论困难、资源受限、信息阻塞、价值冲突、可接受风险，或已经足以支持上层决策。
 
-用 MALA 时：
+## 谨慎主张
 
-- `诊断`：对象清楚，但“未知”被多个 Jeopardy 场景混在一起。
-- `修复后问题`："Jeopardy 常规题、Final Jeopardy 和线上测试各给参赛者多少作答时间？"
-- `最终回答`：常规题大约 5 秒，Final Jeopardy 是 30 秒，线上测试每题大约 15 秒。
+MALA-Graph 不声称解决所有问题，也不声称存在跨所有任务的绝对最优求解方式。
 
-更多经过验证的案例见 [中文案例](zh/cases/README.md)，但是目前并不完善，我还没找到一个足够好的benchmark。
+它更合理的主张是：在给定问题状态表示、solver 集合、预算约束和价值函数时，MALA-Graph 试图以元推理和信息价值为依据，选择单位成本下预期收益最高的问题推进动作。
 
-## 授权
+## License
 
-本仓库采用 [CC BY 4.0](LICENSE) 授权。转载、改写和再分发时，请保留署名并附上许可证链接。
+This repository is licensed under [CC BY 4.0](LICENSE).
